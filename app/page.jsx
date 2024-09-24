@@ -288,12 +288,23 @@ export default function ArcaeaPlayRatingCalculator() {
       <ResponsiveContainer width="100%" height={400}>
       <LineChart data={chartData}>
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <XAxis 
+            allowDecimals={false}
+            allowDuplicatedCategory={false}
+            axisLine
+            dataKey="name"
+            tickLine
+        />
+        <YAxis 
+            axisLine
+            tick
+            tickLine
+        />
         <Tooltip />
         <Legend />
         <Line
-          type="monotone"
+          type="linear"
+          dot={false}
           dataKey="score"
           stroke="#8884d8"
           activeDot={{ r: 8 }}
