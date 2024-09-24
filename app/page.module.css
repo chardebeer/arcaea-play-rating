@@ -163,3 +163,53 @@ a.secondary {
     filter: invert();
   }
 }
+#chart {
+  * {
+    fill: currentColor;
+  }
+  polyline {
+    stroke: currentColor;
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
+  }
+  rect {
+    z-index: -1;
+    fill: var(--color);
+  }
+  text {
+    font: 0.33em 'Exo';
+    user-select: none;
+  }
+  g > text {
+    color: white;
+    font-size: 1.5em;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    opacity: 0.2;
+  }
+  /* Hide stars when at the right edge of the graph. */
+  text[x='150'] {
+    display: none;
+  }
+
+  .dotted {
+    stroke-dasharray: 4;
+  }
+
+  #purple-deco {
+    fill: url(#purple-deco-gradient);
+  }
+  #tomato-deco {
+    fill: url(#tomato-deco-gradient);
+  }
+  #star1 {
+    fill: url(#star1-gradient);
+  }
+  #star2 {
+    fill: url(#star2-gradient);
+  }
+  #star3 {
+    fill: url(#star3-gradient);
+  }
+
+}
